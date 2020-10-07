@@ -1,13 +1,18 @@
 package com.example.demo;
 
 public class MoodAnalyser {
+	private String message;
 
-	public String analyseMood(String message) {
-		String mood=null;
-		if(message.contains("Sad"))
-			mood="SAD";
+	public MoodAnalyser(String message) {
+		this.message = message;
+	}
+
+	public String analyseMood() {
+		String mood = null;
+		if (message.contains("Sad"))
+			mood = "SAD";
 		else
-			mood="HAPPY";
+			mood = "HAPPY";
 		return mood;
 	}
 
